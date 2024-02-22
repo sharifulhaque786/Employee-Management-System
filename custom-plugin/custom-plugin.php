@@ -6,7 +6,6 @@
 * Author:   Shariful Haque
 * Author URI:   https://sfl.media/
 * Version:   1.0.0
-
 */
 
 define("EMS_PLUGIN_PATH", plugin_dir_path(__FILE__));
