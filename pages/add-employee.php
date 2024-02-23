@@ -18,7 +18,7 @@
                 <h2>Add Employee</h2>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form action="/action_page.php">
+                        <form action="">
                             <div class="mb-3 mt-3">
                                 <label for="name" class="form-label">Name:</label>
                                 <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
