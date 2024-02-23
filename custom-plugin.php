@@ -8,7 +8,8 @@
  * Version:   1.0.0
  */
 
-define('MY_PLUGIN_PATH', plugin_dir_path(__FILE__));
+//define('MY_PLUGIN_PATH', plugin_dir_path(__FILE__));
+define("MY_PLUGIN_PATH", site_url('/wp-content/plugins/Employee-Management-System/'));
 
 add_action('admin_menu', 'ems_add_admin_menu');
 
@@ -23,12 +24,12 @@ function ems_add_admin_menu()
 
 function ems_crud_system()
 {
-    include_once(MY_PLUGIN_PATH . 'pages/add-employee.php');
+    include_once('pages/add-employee.php');
 }
 
 function ems_list_employee()
 {
-    include_once(MY_PLUGIN_PATH . 'pages/list-employee.php');
+    include_once('pages/list-employee.php');
 }
 
 
@@ -41,7 +42,7 @@ add_action("admin_enqueue_scripts", "ems_add_plugin_assets");
 function ems_add_plugin_assets()
 {
     // styles (css)
-    wp_enqueue_style("ems-bootstrap-css", MY_PLUGIN_PATH . "/Users/mdsharifulhaque/Local Sites/learning-wordpress-plugin/app/public/css/bootstrap.min.css", array(), "1.0.0", "all");
+    wp_enqueue_style("ems-bootstrap-css", MY_PLUGIN_PATH . "/css/bootstrap.min.css", array(), "1.0.0", "all");
 
     wp_enqueue_style("ems-datatable-css", MY_PLUGIN_PATH . "/css/jquery.dataTables.min.css", array(), "1.0.0", "all");
 
