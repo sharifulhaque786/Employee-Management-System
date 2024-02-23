@@ -55,9 +55,9 @@
 
 
     <script>
-        jQuery(function () {
-            new DataTable('#tbl-employee');
-        });
+    $(function() {
+        new DataTable('#tbl-employee');
+    });
     </script>
 </body>
 
