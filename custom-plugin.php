@@ -52,7 +52,7 @@ function ems_add_plugin_assets()
     wp_enqueue_script("ems-bootstrap-js", MY_PLUGIN_PATH . "/js/bootstrap.min.js", array("jquery"), "1.0.0");
     wp_enqueue_script("ems-datatable-js", MY_PLUGIN_PATH . "/js/jquery.dataTables.min.js", array("jquery"), "1.0.0");
     wp_enqueue_script("ems-validate-js", MY_PLUGIN_PATH . "/js/jquery.validate.min.js", array("jquery"), "1.0.0");
-    // wp_enqueue_script("ems-custom-js", MY_PLUGIN_PATH."js/custom.js", array("jquery"), "1.0.0");
+    wp_enqueue_script("ems-custom-js", MY_PLUGIN_PATH . "/js/custom.js", array("jquery"), "1.0.0");
 
     //wp_add_inline_script("ems-validate-js", file_get_contents(MY_PLUGIN_PATH . "/js/custom.js"));
 }
