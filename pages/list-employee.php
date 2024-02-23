@@ -22,27 +22,30 @@
                         <table class="table" id="tbl-employee">
                             <thead>
                                 <tr>
-                                    <th>Firstname</th>
-                                    <th>Lastname</th>
-                                    <th>Email</th>
+                                    <th>#ID</th>
+                                    <th>#Full Name</th>
+                                    <th>#Email</th>
+                                    <th>#Phone Number</th>
+                                    <th>#Gender</th>
+                                    <th>#Designation</th>
+                                    <th>#Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>John</td>
+                                    <td>1</td>
                                     <td>Doe</td>
                                     <td>john@example.com</td>
+                                    <td>1234567890</td>
+                                    <td>Male</td>
+                                    <td>CEO</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn btn-warning">Edit</a>
+                                        <a href="javascript:void(0)" class="btn btn-danger">Delete</a>
+                                        <a href="javascript:void(0)" class="btn btn-info">View</a>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Mary</td>
-                                    <td>Moe</td>
-                                    <td>mary@example.com</td>
-                                </tr>
-                                <tr>
-                                    <td>July</td>
-                                    <td>Dooley</td>
-                                    <td>july@example.com</td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -53,12 +56,6 @@
         </div>
     </div>
 
-
-    <script>
-    $(function() {
-        new DataTable('#tbl-employee');
-    });
-    </script>
 </body>
 
 </html>
