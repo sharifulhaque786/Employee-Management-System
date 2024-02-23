@@ -8,7 +8,7 @@
  * Version:   1.0.0
  */
 
-define("WP_PLUGIN_PATH", plugin_dir_path(__FILE__));
+define('MY_PLUGIN_PATH', plugin_dir_path(__FILE__));
 
 add_action('admin_menu', 'ems_add_admin_menu');
 
@@ -23,12 +23,12 @@ function ems_add_admin_menu()
 
 function ems_crud_system()
 {
-    include_once(WP_PLUGIN_PATH . 'pages/add-employee.php');
+    include_once(MY_PLUGIN_PATH . 'pages/add-employee.php');
 }
 
 function ems_list_employee()
 {
-    include_once(WP_PLUGIN_PATH . 'pages/list-employee.php');
+    include_once(MY_PLUGIN_PATH . 'pages/list-employee.php');
 }
 
 
@@ -41,17 +41,17 @@ add_action("admin_enqueue_scripts", "ems_add_plugin_assets");
 function ems_add_plugin_assets()
 {
     // styles (css)
-    wp_enqueue_style("ems-bootstrap-css", WP_PLUGIN_PATH . "/Users/mdsharifulhaque/Local Sites/learning-wordpress-plugin/app/public/css/bootstrap.min.css", array(), "1.0.0", "all");
+    wp_enqueue_style("ems-bootstrap-css", MY_PLUGIN_PATH . "/Users/mdsharifulhaque/Local Sites/learning-wordpress-plugin/app/public/css/bootstrap.min.css", array(), "1.0.0", "all");
 
-    wp_enqueue_style("ems-datatable-css", WP_PLUGIN_PATH . "/css/jquery.dataTables.min.css", array(), "1.0.0", "all");
+    wp_enqueue_style("ems-datatable-css", MY_PLUGIN_PATH . "/css/jquery.dataTables.min.css", array(), "1.0.0", "all");
 
-    wp_enqueue_style("ems-custom-css", WP_PLUGIN_PATH . "/css/custom.css", array(), "1.0.0", "all");
+    wp_enqueue_style("ems-custom-css", MY_PLUGIN_PATH . "/css/custom.css", array(), "1.0.0", "all");
 
     // js (javascript plugin files)
-    wp_enqueue_script("ems-bootstrap-js", WP_PLUGIN_PATH . "/js/bootstrap.min.js", array("jquery"), "1.0.0");
-    wp_enqueue_script("ems-datatable-js", WP_PLUGIN_PATH . "/js/jquery.dataTables.min.js", array("jquery"), "1.0.0");
-    wp_enqueue_script("ems-validate-js", WP_PLUGIN_PATH . "/js/jquery.validate.min.js", array("jquery"), "1.0.0");
-    // wp_enqueue_script("ems-custom-js", WP_PLUGIN_PATH."js/custom.js", array("jquery"), "1.0.0");
+    wp_enqueue_script("ems-bootstrap-js", MY_PLUGIN_PATH . "/js/bootstrap.min.js", array("jquery"), "1.0.0");
+    wp_enqueue_script("ems-datatable-js", MY_PLUGIN_PATH . "/js/jquery.dataTables.min.js", array("jquery"), "1.0.0");
+    wp_enqueue_script("ems-validate-js", MY_PLUGIN_PATH . "/js/jquery.validate.min.js", array("jquery"), "1.0.0");
+    // wp_enqueue_script("ems-custom-js", MY_PLUGIN_PATH."js/custom.js", array("jquery"), "1.0.0");
 
-    //wp_add_inline_script("ems-validate-js", file_get_contents(WP_PLUGIN_PATH . "/js/custom.js"));
+    //wp_add_inline_script("ems-validate-js", file_get_contents(MY_PLUGIN_PATH . "/js/custom.js"));
 }
