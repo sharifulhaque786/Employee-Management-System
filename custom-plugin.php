@@ -29,13 +29,13 @@ function ems_add_admin_menu()
 // Menu handle Callback
 function ems_crud_system()
 {
-    include_once(EMS_PLUGIN_PATH . 'pages/add-employee.php');
+    include_once (EMS_PLUGIN_PATH . 'pages/add-employee.php');
 }
 
 // Submenu handle Callback
 function ems_list_employee()
 {
-    include_once(EMS_PLUGIN_PATH . 'pages/list-employee.php');
+    include_once (EMS_PLUGIN_PATH . 'pages/list-employee.php');
 }
 
 register_activation_hook(__FILE__, "ems_create_table");
